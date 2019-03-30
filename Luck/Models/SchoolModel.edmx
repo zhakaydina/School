@@ -1,0 +1,1114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище Mektep_DBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="Discriminator" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ClaimType" Type="nvarchar(max)" />
+          <Property Name="ClaimValue" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="datetime" />
+          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="Aty" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Tegi" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Akesinin_aty" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Tugan_kuni" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Meken_zhai" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Tel_nomeri" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ata_analar">
+          <Key>
+            <PropertyRef Name="Id_Ata_ana" />
+          </Key>
+          <Property Name="Id_Ata_ana" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Aty" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tegi" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tel_nomeri" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tugan_kuni" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Ata_ana_kosymsha" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Events">
+          <Key>
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="EventID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+          <Property Name="Start" Type="datetime" Nullable="false" />
+          <Property Name="End" Type="datetime" />
+          <Property Name="ThemeColor" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsFullDay" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Jurnal">
+          <Key>
+            <PropertyRef Name="Id_jurnal" />
+          </Key>
+          <Property Name="Id_jurnal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Baga" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Data" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Sabakka_katysuy" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Jurnal_kosymsha" Type="varchar" MaxLength="50" />
+          <Property Name="Id_sabak" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Mektepter">
+          <Key>
+            <PropertyRef Name="Id_mektep" />
+          </Key>
+          <Property Name="Id_mektep" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Mektep_atauy" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mektep_directory" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mektep_kosymsha_akparaty" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Meml_kyzmetker">
+          <Key>
+            <PropertyRef Name="Id_meml_kyzmetker" />
+          </Key>
+          <Property Name="Id_meml_kyzmetker" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Aty" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tegi" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Akesinin_aty" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tugan_kuni" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tel_nomeri" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Mugalimder">
+          <Key>
+            <PropertyRef Name="Id_mugalim" />
+          </Key>
+          <Property Name="Id_mugalim" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Aty" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tegi" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Akesinin_aty" Type="varchar" MaxLength="50" />
+          <Property Name="Tel_nomeri" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tugan_kuni" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Meken_zhaiy" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Okushylar">
+          <Key>
+            <PropertyRef Name="Id_okushy" />
+          </Key>
+          <Property Name="Id_okushy" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Aty" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tegi" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Akesinin_aty" Type="varchar" MaxLength="50" />
+          <Property Name="Tugan_kuni" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tel_nomeri" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Class" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Synyp_zhetekshisi" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Okushy_kosymsha_akparaty" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Pander">
+          <Key>
+            <PropertyRef Name="Id_pan" />
+          </Key>
+          <Property Name="Id_pan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Pan_aty" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Id_jurnal" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Register">
+          <Key>
+            <PropertyRef Name="Id_register" />
+          </Key>
+          <Property Name="Id_register" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id_synyp" Type="int" Nullable="false" />
+          <Property Name="Id_pan" Type="int" Nullable="false" />
+          <Property Name="Id_meml_kyzmetker" Type="int" Nullable="false" />
+          <Property Name="Id_mektep" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sabak_kestesi">
+          <Key>
+            <PropertyRef Name="Id_sabak" />
+          </Key>
+          <Property Name="Id_sabak" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Sabak_uakyty" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Sabak_aty" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Id_Ata_ana" Type="int" Nullable="false" />
+          <Property Name="Id_mugalim" Type="int" Nullable="false" />
+          <Property Name="Id_okushy" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Synyptar">
+          <Key>
+            <PropertyRef Name="Id_synyp" />
+          </Key>
+          <Property Name="Id_synyp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Synyp_atauy" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Okushylar_sany" Type="int" Nullable="false" />
+          <Property Name="Synyp_zhetekshisi" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="fk_Ata_analar">
+          <End Role="Ata_analar" Type="Self.Ata_analar" Multiplicity="1" />
+          <End Role="Sabak_kestesi" Type="Self.Sabak_kestesi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ata_analar">
+              <PropertyRef Name="Id_Ata_ana" />
+            </Principal>
+            <Dependent Role="Sabak_kestesi">
+              <PropertyRef Name="Id_Ata_ana" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetRoles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Jurnal">
+          <End Role="Jurnal" Type="Self.Jurnal" Multiplicity="1" />
+          <End Role="Pander" Type="Self.Pander" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jurnal">
+              <PropertyRef Name="Id_jurnal" />
+            </Principal>
+            <Dependent Role="Pander">
+              <PropertyRef Name="Id_jurnal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Mektepter">
+          <End Role="Mektepter" Type="Self.Mektepter" Multiplicity="1" />
+          <End Role="Register" Type="Self.Register" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Mektepter">
+              <PropertyRef Name="Id_mektep" />
+            </Principal>
+            <Dependent Role="Register">
+              <PropertyRef Name="Id_mektep" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Meml_kyzmetker">
+          <End Role="Meml_kyzmetker" Type="Self.Meml_kyzmetker" Multiplicity="1" />
+          <End Role="Register" Type="Self.Register" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Meml_kyzmetker">
+              <PropertyRef Name="Id_meml_kyzmetker" />
+            </Principal>
+            <Dependent Role="Register">
+              <PropertyRef Name="Id_meml_kyzmetker" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Mugalimder">
+          <End Role="Mugalimder" Type="Self.Mugalimder" Multiplicity="1" />
+          <End Role="Sabak_kestesi" Type="Self.Sabak_kestesi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Mugalimder">
+              <PropertyRef Name="Id_mugalim" />
+            </Principal>
+            <Dependent Role="Sabak_kestesi">
+              <PropertyRef Name="Id_mugalim" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Okushylar">
+          <End Role="Okushylar" Type="Self.Okushylar" Multiplicity="1" />
+          <End Role="Sabak_kestesi" Type="Self.Sabak_kestesi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Okushylar">
+              <PropertyRef Name="Id_okushy" />
+            </Principal>
+            <Dependent Role="Sabak_kestesi">
+              <PropertyRef Name="Id_okushy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Pander">
+          <End Role="Pander" Type="Self.Pander" Multiplicity="1" />
+          <End Role="Register" Type="Self.Register" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pander">
+              <PropertyRef Name="Id_pan" />
+            </Principal>
+            <Dependent Role="Register">
+              <PropertyRef Name="Id_pan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Sabak_kestesi">
+          <End Role="Sabak_kestesi" Type="Self.Sabak_kestesi" Multiplicity="1" />
+          <End Role="Jurnal" Type="Self.Jurnal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sabak_kestesi">
+              <PropertyRef Name="Id_sabak" />
+            </Principal>
+            <Dependent Role="Jurnal">
+              <PropertyRef Name="Id_sabak" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Synyptar">
+          <End Role="Synyptar" Type="Self.Synyptar" Multiplicity="1" />
+          <End Role="Register" Type="Self.Register" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Synyptar">
+              <PropertyRef Name="Id_synyp" />
+            </Principal>
+            <Dependent Role="Register">
+              <PropertyRef Name="Id_synyp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище Mektep_DBModelContainer">
+          <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ata_analar" EntityType="Self.Ata_analar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Events" EntityType="Self.Events" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Jurnal" EntityType="Self.Jurnal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mektepter" EntityType="Self.Mektepter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Meml_kyzmetker" EntityType="Self.Meml_kyzmetker" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mugalimder" EntityType="Self.Mugalimder" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Okushylar" EntityType="Self.Okushylar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pander" EntityType="Self.Pander" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Register" EntityType="Self.Register" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sabak_kestesi" EntityType="Self.Sabak_kestesi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Synyptar" EntityType="Self.Synyptar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fk_Ata_analar" Association="Self.fk_Ata_analar">
+            <End Role="Ata_analar" EntitySet="Ata_analar" />
+            <End Role="Sabak_kestesi" EntitySet="Sabak_kestesi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Jurnal" Association="Self.fk_Jurnal">
+            <End Role="Jurnal" EntitySet="Jurnal" />
+            <End Role="Pander" EntitySet="Pander" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Mektepter" Association="Self.fk_Mektepter">
+            <End Role="Mektepter" EntitySet="Mektepter" />
+            <End Role="Register" EntitySet="Register" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Meml_kyzmetker" Association="Self.fk_Meml_kyzmetker">
+            <End Role="Meml_kyzmetker" EntitySet="Meml_kyzmetker" />
+            <End Role="Register" EntitySet="Register" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Mugalimder" Association="Self.fk_Mugalimder">
+            <End Role="Mugalimder" EntitySet="Mugalimder" />
+            <End Role="Sabak_kestesi" EntitySet="Sabak_kestesi" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Okushylar" Association="Self.fk_Okushylar">
+            <End Role="Okushylar" EntitySet="Okushylar" />
+            <End Role="Sabak_kestesi" EntitySet="Sabak_kestesi" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Pander" Association="Self.fk_Pander">
+            <End Role="Pander" EntitySet="Pander" />
+            <End Role="Register" EntitySet="Register" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Sabak_kestesi" Association="Self.fk_Sabak_kestesi">
+            <End Role="Sabak_kestesi" EntitySet="Sabak_kestesi" />
+            <End Role="Jurnal" EntitySet="Jurnal" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Synyptar" Association="Self.fk_Synyptar">
+            <End Role="Synyptar" EntitySet="Synyptar" />
+            <End Role="Register" EntitySet="Register" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Mektep_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Discriminator" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Aty" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tegi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Akesinin_aty" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tugan_kuni" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Meken_zhai" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tel_nomeri" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+          <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+        </EntityType>
+        <EntityType Name="Ata_analar">
+          <Key>
+            <PropertyRef Name="Id_Ata_ana" />
+          </Key>
+          <Property Name="Id_Ata_ana" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Aty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tegi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tel_nomeri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tugan_kuni" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Ata_ana_kosymsha" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Sabak_kestesi" Relationship="Self.fk_Ata_analar" FromRole="Ata_analar" ToRole="Sabak_kestesi" />
+        </EntityType>
+        <EntityType Name="Jurnal">
+          <Key>
+            <PropertyRef Name="Id_jurnal" />
+          </Key>
+          <Property Name="Id_jurnal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Baga" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Data" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Sabakka_katysuy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Jurnal_kosymsha" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Id_sabak" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Pander" Relationship="Self.fk_Jurnal" FromRole="Jurnal" ToRole="Pander" />
+          <NavigationProperty Name="Sabak_kestesi" Relationship="Self.fk_Sabak_kestesi" FromRole="Jurnal" ToRole="Sabak_kestesi" />
+        </EntityType>
+        <EntityType Name="Mektepter">
+          <Key>
+            <PropertyRef Name="Id_mektep" />
+          </Key>
+          <Property Name="Id_mektep" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Mektep_atauy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mektep_directory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mektep_kosymsha_akparaty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Register" Relationship="Self.fk_Mektepter" FromRole="Mektepter" ToRole="Register" />
+        </EntityType>
+        <EntityType Name="Meml_kyzmetker">
+          <Key>
+            <PropertyRef Name="Id_meml_kyzmetker" />
+          </Key>
+          <Property Name="Id_meml_kyzmetker" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Aty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tegi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Akesinin_aty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tugan_kuni" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tel_nomeri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Register" Relationship="Self.fk_Meml_kyzmetker" FromRole="Meml_kyzmetker" ToRole="Register" />
+        </EntityType>
+        <EntityType Name="Mugalimder">
+          <Key>
+            <PropertyRef Name="Id_mugalim" />
+          </Key>
+          <Property Name="Id_mugalim" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Aty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tegi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Akesinin_aty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tel_nomeri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tugan_kuni" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Meken_zhaiy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Sabak_kestesi" Relationship="Self.fk_Mugalimder" FromRole="Mugalimder" ToRole="Sabak_kestesi" />
+        </EntityType>
+        <EntityType Name="Okushylar">
+          <Key>
+            <PropertyRef Name="Id_okushy" />
+          </Key>
+          <Property Name="Id_okushy" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Aty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tegi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Akesinin_aty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tugan_kuni" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tel_nomeri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Class" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Synyp_zhetekshisi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Okushy_kosymsha_akparaty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Sabak_kestesi" Relationship="Self.fk_Okushylar" FromRole="Okushylar" ToRole="Sabak_kestesi" />
+        </EntityType>
+        <EntityType Name="Pander">
+          <Key>
+            <PropertyRef Name="Id_pan" />
+          </Key>
+          <Property Name="Id_pan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Pan_aty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Id_jurnal" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Jurnal" Relationship="Self.fk_Jurnal" FromRole="Pander" ToRole="Jurnal" />
+          <NavigationProperty Name="Register" Relationship="Self.fk_Pander" FromRole="Pander" ToRole="Register" />
+        </EntityType>
+        <EntityType Name="Register">
+          <Key>
+            <PropertyRef Name="Id_register" />
+          </Key>
+          <Property Name="Id_register" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_synyp" Type="Int32" Nullable="false" />
+          <Property Name="Id_pan" Type="Int32" Nullable="false" />
+          <Property Name="Id_meml_kyzmetker" Type="Int32" Nullable="false" />
+          <Property Name="Id_mektep" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Mektepter" Relationship="Self.fk_Mektepter" FromRole="Register" ToRole="Mektepter" />
+          <NavigationProperty Name="Meml_kyzmetker" Relationship="Self.fk_Meml_kyzmetker" FromRole="Register" ToRole="Meml_kyzmetker" />
+          <NavigationProperty Name="Pander" Relationship="Self.fk_Pander" FromRole="Register" ToRole="Pander" />
+          <NavigationProperty Name="Synyptar" Relationship="Self.fk_Synyptar" FromRole="Register" ToRole="Synyptar" />
+        </EntityType>
+        <EntityType Name="Sabak_kestesi">
+          <Key>
+            <PropertyRef Name="Id_sabak" />
+          </Key>
+          <Property Name="Id_sabak" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Sabak_uakyty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Sabak_aty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Id_Ata_ana" Type="Int32" Nullable="false" />
+          <Property Name="Id_mugalim" Type="Int32" Nullable="false" />
+          <Property Name="Id_okushy" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Ata_analar" Relationship="Self.fk_Ata_analar" FromRole="Sabak_kestesi" ToRole="Ata_analar" />
+          <NavigationProperty Name="Jurnal" Relationship="Self.fk_Sabak_kestesi" FromRole="Sabak_kestesi" ToRole="Jurnal" />
+          <NavigationProperty Name="Mugalimder" Relationship="Self.fk_Mugalimder" FromRole="Sabak_kestesi" ToRole="Mugalimder" />
+          <NavigationProperty Name="Okushylar" Relationship="Self.fk_Okushylar" FromRole="Sabak_kestesi" ToRole="Okushylar" />
+        </EntityType>
+        <EntityType Name="Synyptar">
+          <Key>
+            <PropertyRef Name="Id_synyp" />
+          </Key>
+          <Property Name="Id_synyp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Synyp_atauy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Okushylar_sany" Type="Int32" Nullable="false" />
+          <Property Name="Synyp_zhetekshisi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Register" Relationship="Self.fk_Synyptar" FromRole="Synyptar" ToRole="Register" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Ata_analar">
+          <End Role="Ata_analar" Type="Self.Ata_analar" Multiplicity="1" />
+          <End Role="Sabak_kestesi" Type="Self.Sabak_kestesi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ata_analar">
+              <PropertyRef Name="Id_Ata_ana" />
+            </Principal>
+            <Dependent Role="Sabak_kestesi">
+              <PropertyRef Name="Id_Ata_ana" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Jurnal">
+          <End Role="Jurnal" Type="Self.Jurnal" Multiplicity="1" />
+          <End Role="Pander" Type="Self.Pander" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jurnal">
+              <PropertyRef Name="Id_jurnal" />
+            </Principal>
+            <Dependent Role="Pander">
+              <PropertyRef Name="Id_jurnal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Sabak_kestesi">
+          <End Role="Sabak_kestesi" Type="Self.Sabak_kestesi" Multiplicity="1" />
+          <End Role="Jurnal" Type="Self.Jurnal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sabak_kestesi">
+              <PropertyRef Name="Id_sabak" />
+            </Principal>
+            <Dependent Role="Jurnal">
+              <PropertyRef Name="Id_sabak" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Mektepter">
+          <End Role="Mektepter" Type="Self.Mektepter" Multiplicity="1" />
+          <End Role="Register" Type="Self.Register" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Mektepter">
+              <PropertyRef Name="Id_mektep" />
+            </Principal>
+            <Dependent Role="Register">
+              <PropertyRef Name="Id_mektep" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Meml_kyzmetker">
+          <End Role="Meml_kyzmetker" Type="Self.Meml_kyzmetker" Multiplicity="1" />
+          <End Role="Register" Type="Self.Register" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Meml_kyzmetker">
+              <PropertyRef Name="Id_meml_kyzmetker" />
+            </Principal>
+            <Dependent Role="Register">
+              <PropertyRef Name="Id_meml_kyzmetker" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Mugalimder">
+          <End Role="Mugalimder" Type="Self.Mugalimder" Multiplicity="1" />
+          <End Role="Sabak_kestesi" Type="Self.Sabak_kestesi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Mugalimder">
+              <PropertyRef Name="Id_mugalim" />
+            </Principal>
+            <Dependent Role="Sabak_kestesi">
+              <PropertyRef Name="Id_mugalim" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Okushylar">
+          <End Role="Okushylar" Type="Self.Okushylar" Multiplicity="1" />
+          <End Role="Sabak_kestesi" Type="Self.Sabak_kestesi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Okushylar">
+              <PropertyRef Name="Id_okushy" />
+            </Principal>
+            <Dependent Role="Sabak_kestesi">
+              <PropertyRef Name="Id_okushy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Pander">
+          <End Role="Pander" Type="Self.Pander" Multiplicity="1" />
+          <End Role="Register" Type="Self.Register" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pander">
+              <PropertyRef Name="Id_pan" />
+            </Principal>
+            <Dependent Role="Register">
+              <PropertyRef Name="Id_pan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Synyptar">
+          <End Role="Synyptar" Type="Self.Synyptar" Multiplicity="1" />
+          <End Role="Register" Type="Self.Register" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Synyptar">
+              <PropertyRef Name="Id_synyp" />
+            </Principal>
+            <Dependent Role="Register">
+              <PropertyRef Name="Id_synyp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AspNetUserRoles">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="*" />
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="Mektep_DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" />
+          <EntitySet Name="Ata_analar" EntityType="Self.Ata_analar" />
+          <EntitySet Name="Jurnal" EntityType="Self.Jurnal" />
+          <EntitySet Name="Mektepter" EntityType="Self.Mektepter" />
+          <EntitySet Name="Meml_kyzmetker" EntityType="Self.Meml_kyzmetker" />
+          <EntitySet Name="Mugalimder" EntityType="Self.Mugalimder" />
+          <EntitySet Name="Okushylar" EntityType="Self.Okushylar" />
+          <EntitySet Name="Pander" EntityType="Self.Pander" />
+          <EntitySet Name="Register" EntityType="Self.Register" />
+          <EntitySet Name="Sabak_kestesi" EntityType="Self.Sabak_kestesi" />
+          <EntitySet Name="Synyptar" EntityType="Self.Synyptar" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Ata_analar" Association="Self.fk_Ata_analar">
+            <End Role="Ata_analar" EntitySet="Ata_analar" />
+            <End Role="Sabak_kestesi" EntitySet="Sabak_kestesi" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Jurnal" Association="Self.fk_Jurnal">
+            <End Role="Jurnal" EntitySet="Jurnal" />
+            <End Role="Pander" EntitySet="Pander" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Sabak_kestesi" Association="Self.fk_Sabak_kestesi">
+            <End Role="Sabak_kestesi" EntitySet="Sabak_kestesi" />
+            <End Role="Jurnal" EntitySet="Jurnal" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Mektepter" Association="Self.fk_Mektepter">
+            <End Role="Mektepter" EntitySet="Mektepter" />
+            <End Role="Register" EntitySet="Register" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Meml_kyzmetker" Association="Self.fk_Meml_kyzmetker">
+            <End Role="Meml_kyzmetker" EntitySet="Meml_kyzmetker" />
+            <End Role="Register" EntitySet="Register" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Mugalimder" Association="Self.fk_Mugalimder">
+            <End Role="Mugalimder" EntitySet="Mugalimder" />
+            <End Role="Sabak_kestesi" EntitySet="Sabak_kestesi" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Okushylar" Association="Self.fk_Okushylar">
+            <End Role="Okushylar" EntitySet="Okushylar" />
+            <End Role="Sabak_kestesi" EntitySet="Sabak_kestesi" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Pander" Association="Self.fk_Pander">
+            <End Role="Pander" EntitySet="Pander" />
+            <End Role="Register" EntitySet="Register" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Synyptar" Association="Self.fk_Synyptar">
+            <End Role="Synyptar" EntitySet="Synyptar" />
+            <End Role="Register" EntitySet="Register" />
+          </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+          </AssociationSet>
+          <EntitySet Name="Events" EntityType="Mektep_DBModel.Events" />
+        </EntityContainer>
+        <EntityType Name="Events">
+          <Key>
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="EventID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Subject" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Start" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="End" Type="DateTime" Precision="3" />
+          <Property Name="ThemeColor" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsFullDay" Type="Boolean" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище Mektep_DBModelContainer" CdmEntityContainer="Mektep_DBEntities">
+          <EntitySetMapping Name="C__MigrationHistory">
+            <EntityTypeMapping TypeName="Mektep_DBModel.C__MigrationHistory">
+              <MappingFragment StoreEntitySet="__MigrationHistory">
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetRoles">
+            <EntityTypeMapping TypeName="Mektep_DBModel.AspNetRoles">
+              <MappingFragment StoreEntitySet="AspNetRoles">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Discriminator" ColumnName="Discriminator" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserClaims">
+            <EntityTypeMapping TypeName="Mektep_DBModel.AspNetUserClaims">
+              <MappingFragment StoreEntitySet="AspNetUserClaims">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserLogins">
+            <EntityTypeMapping TypeName="Mektep_DBModel.AspNetUserLogins">
+              <MappingFragment StoreEntitySet="AspNetUserLogins">
+                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsers">
+            <EntityTypeMapping TypeName="Mektep_DBModel.AspNetUsers">
+              <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Aty" ColumnName="Aty" />
+                <ScalarProperty Name="Tegi" ColumnName="Tegi" />
+                <ScalarProperty Name="Akesinin_aty" ColumnName="Akesinin_aty" />
+                <ScalarProperty Name="Tugan_kuni" ColumnName="Tugan_kuni" />
+                <ScalarProperty Name="Meken_zhai" ColumnName="Meken_zhai" />
+                <ScalarProperty Name="Tel_nomeri" ColumnName="Tel_nomeri" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ata_analar">
+            <EntityTypeMapping TypeName="Mektep_DBModel.Ata_analar">
+              <MappingFragment StoreEntitySet="Ata_analar">
+                <ScalarProperty Name="Id_Ata_ana" ColumnName="Id_Ata_ana" />
+                <ScalarProperty Name="Aty" ColumnName="Aty" />
+                <ScalarProperty Name="Tegi" ColumnName="Tegi" />
+                <ScalarProperty Name="Tel_nomeri" ColumnName="Tel_nomeri" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Tugan_kuni" ColumnName="Tugan_kuni" />
+                <ScalarProperty Name="Ata_ana_kosymsha" ColumnName="Ata_ana_kosymsha" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jurnal">
+            <EntityTypeMapping TypeName="Mektep_DBModel.Jurnal">
+              <MappingFragment StoreEntitySet="Jurnal">
+                <ScalarProperty Name="Id_jurnal" ColumnName="Id_jurnal" />
+                <ScalarProperty Name="Baga" ColumnName="Baga" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="Sabakka_katysuy" ColumnName="Sabakka_katysuy" />
+                <ScalarProperty Name="Jurnal_kosymsha" ColumnName="Jurnal_kosymsha" />
+                <ScalarProperty Name="Id_sabak" ColumnName="Id_sabak" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mektepter">
+            <EntityTypeMapping TypeName="Mektep_DBModel.Mektepter">
+              <MappingFragment StoreEntitySet="Mektepter">
+                <ScalarProperty Name="Id_mektep" ColumnName="Id_mektep" />
+                <ScalarProperty Name="Mektep_atauy" ColumnName="Mektep_atauy" />
+                <ScalarProperty Name="Mektep_directory" ColumnName="Mektep_directory" />
+                <ScalarProperty Name="Mektep_kosymsha_akparaty" ColumnName="Mektep_kosymsha_akparaty" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Meml_kyzmetker">
+            <EntityTypeMapping TypeName="Mektep_DBModel.Meml_kyzmetker">
+              <MappingFragment StoreEntitySet="Meml_kyzmetker">
+                <ScalarProperty Name="Id_meml_kyzmetker" ColumnName="Id_meml_kyzmetker" />
+                <ScalarProperty Name="Aty" ColumnName="Aty" />
+                <ScalarProperty Name="Tegi" ColumnName="Tegi" />
+                <ScalarProperty Name="Akesinin_aty" ColumnName="Akesinin_aty" />
+                <ScalarProperty Name="Tugan_kuni" ColumnName="Tugan_kuni" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Tel_nomeri" ColumnName="Tel_nomeri" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mugalimder">
+            <EntityTypeMapping TypeName="Mektep_DBModel.Mugalimder">
+              <MappingFragment StoreEntitySet="Mugalimder">
+                <ScalarProperty Name="Id_mugalim" ColumnName="Id_mugalim" />
+                <ScalarProperty Name="Aty" ColumnName="Aty" />
+                <ScalarProperty Name="Tegi" ColumnName="Tegi" />
+                <ScalarProperty Name="Akesinin_aty" ColumnName="Akesinin_aty" />
+                <ScalarProperty Name="Tel_nomeri" ColumnName="Tel_nomeri" />
+                <ScalarProperty Name="Tugan_kuni" ColumnName="Tugan_kuni" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Meken_zhaiy" ColumnName="Meken_zhaiy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Okushylar">
+            <EntityTypeMapping TypeName="Mektep_DBModel.Okushylar">
+              <MappingFragment StoreEntitySet="Okushylar">
+                <ScalarProperty Name="Id_okushy" ColumnName="Id_okushy" />
+                <ScalarProperty Name="Aty" ColumnName="Aty" />
+                <ScalarProperty Name="Tegi" ColumnName="Tegi" />
+                <ScalarProperty Name="Akesinin_aty" ColumnName="Akesinin_aty" />
+                <ScalarProperty Name="Tugan_kuni" ColumnName="Tugan_kuni" />
+                <ScalarProperty Name="Tel_nomeri" ColumnName="Tel_nomeri" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Class" ColumnName="Class" />
+                <ScalarProperty Name="Synyp_zhetekshisi" ColumnName="Synyp_zhetekshisi" />
+                <ScalarProperty Name="Okushy_kosymsha_akparaty" ColumnName="Okushy_kosymsha_akparaty" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pander">
+            <EntityTypeMapping TypeName="Mektep_DBModel.Pander">
+              <MappingFragment StoreEntitySet="Pander">
+                <ScalarProperty Name="Id_pan" ColumnName="Id_pan" />
+                <ScalarProperty Name="Pan_aty" ColumnName="Pan_aty" />
+                <ScalarProperty Name="Id_jurnal" ColumnName="Id_jurnal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Register">
+            <EntityTypeMapping TypeName="Mektep_DBModel.Register">
+              <MappingFragment StoreEntitySet="Register">
+                <ScalarProperty Name="Id_register" ColumnName="Id_register" />
+                <ScalarProperty Name="Id_synyp" ColumnName="Id_synyp" />
+                <ScalarProperty Name="Id_pan" ColumnName="Id_pan" />
+                <ScalarProperty Name="Id_meml_kyzmetker" ColumnName="Id_meml_kyzmetker" />
+                <ScalarProperty Name="Id_mektep" ColumnName="Id_mektep" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sabak_kestesi">
+            <EntityTypeMapping TypeName="Mektep_DBModel.Sabak_kestesi">
+              <MappingFragment StoreEntitySet="Sabak_kestesi">
+                <ScalarProperty Name="Id_sabak" ColumnName="Id_sabak" />
+                <ScalarProperty Name="Sabak_uakyty" ColumnName="Sabak_uakyty" />
+                <ScalarProperty Name="Sabak_aty" ColumnName="Sabak_aty" />
+                <ScalarProperty Name="Id_Ata_ana" ColumnName="Id_Ata_ana" />
+                <ScalarProperty Name="Id_mugalim" ColumnName="Id_mugalim" />
+                <ScalarProperty Name="Id_okushy" ColumnName="Id_okushy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Synyptar">
+            <EntityTypeMapping TypeName="Mektep_DBModel.Synyptar">
+              <MappingFragment StoreEntitySet="Synyptar">
+                <ScalarProperty Name="Id_synyp" ColumnName="Id_synyp" />
+                <ScalarProperty Name="Synyp_atauy" ColumnName="Synyp_atauy" />
+                <ScalarProperty Name="Okushylar_sany" ColumnName="Okushylar_sany" />
+                <ScalarProperty Name="Synyp_zhetekshisi" ColumnName="Synyp_zhetekshisi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Mektep_DBModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="AspNetUserRoles" TypeName="Mektep_DBModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+            <EndProperty Name="AspNetRoles">
+              <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+            <EndProperty Name="AspNetUsers">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="Events">
+            <EntityTypeMapping TypeName="Mektep_DBModel.Events">
+              <MappingFragment StoreEntitySet="Events">
+                <ScalarProperty Name="IsFullDay" ColumnName="IsFullDay" />
+                <ScalarProperty Name="ThemeColor" ColumnName="ThemeColor" />
+                <ScalarProperty Name="End" ColumnName="End" />
+                <ScalarProperty Name="Start" ColumnName="Start" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

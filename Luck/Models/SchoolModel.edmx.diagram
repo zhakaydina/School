@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d519794cb61a48b59e721f1b97e32b50" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="Mektep_DBModel.C__MigrationHistory" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mektep_DBModel.AspNetRoles" Width="1.5" PointX="9.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mektep_DBModel.AspNetUserClaims" Width="1.5" PointX="15.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mektep_DBModel.AspNetUserLogins" Width="1.5" PointX="15.375" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mektep_DBModel.AspNetUsers" Width="1.5" PointX="12.375" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mektep_DBModel.Ata_analar" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mektep_DBModel.Jurnal" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mektep_DBModel.Mektepter" Width="1.5" PointX="7.125" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mektep_DBModel.Meml_kyzmetker" Width="1.5" PointX="5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mektep_DBModel.Mugalimder" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mektep_DBModel.Okushylar" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mektep_DBModel.Pander" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mektep_DBModel.Register" Width="1.5" PointX="9.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mektep_DBModel.Sabak_kestesi" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mektep_DBModel.Synyptar" Width="1.5" PointX="12.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mektep_DBModel.sysdiagrams" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="Mektep_DBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Mektep_DBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Mektep_DBModel.fk_Ata_analar" ManuallyRouted="false" />
+        <AssociationConnector Association="Mektep_DBModel.fk_Jurnal" ManuallyRouted="false" />
+        <AssociationConnector Association="Mektep_DBModel.fk_Sabak_kestesi" ManuallyRouted="false" />
+        <AssociationConnector Association="Mektep_DBModel.fk_Mektepter" ManuallyRouted="false" />
+        <AssociationConnector Association="Mektep_DBModel.fk_Meml_kyzmetker" ManuallyRouted="false" />
+        <AssociationConnector Association="Mektep_DBModel.fk_Mugalimder" ManuallyRouted="false" />
+        <AssociationConnector Association="Mektep_DBModel.fk_Okushylar" ManuallyRouted="false" />
+        <AssociationConnector Association="Mektep_DBModel.fk_Pander" ManuallyRouted="false" />
+        <AssociationConnector Association="Mektep_DBModel.fk_Synyptar" ManuallyRouted="false" />
+        <AssociationConnector Association="Mektep_DBModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Mektep_DBModel.Events" Width="1.5" PointX="7.375" PointY="7.875" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

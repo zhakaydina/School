@@ -1,0 +1,74 @@
+﻿@model Luck.Models.Mugalimder
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Mugalimder</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Aty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tegi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tegi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Akesinin_aty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Akesinin_aty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tel_nomeri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tel_nomeri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tugan_kuni)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tugan_kuni)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Meken_zhaiy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Meken_zhaiy)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_mugalim }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
